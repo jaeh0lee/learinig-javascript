@@ -31,5 +31,5 @@ for(let char of "hello"){
 const number = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] // 두배의 값을 출력하게 만들기
 
 for(let num of number){
-    console.log(num * num)
+    console.log(num * num) 
 }

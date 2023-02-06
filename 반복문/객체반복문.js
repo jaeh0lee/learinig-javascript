@@ -20,6 +20,5 @@ let str = Object.values(score)
 
 for(let num of str){
     total += num
-    
 }
 console.log(total / str.length);
