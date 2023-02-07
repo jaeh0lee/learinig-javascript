@@ -16,7 +16,7 @@ try {
 //에러를 출력한뒤 코드가 중단되지 않고 다음 코드를 실행시킵니다.
 
 
-console.log("hello")
+console.log("hello")1
 
 
 // 다른 예시
