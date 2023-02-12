@@ -17,17 +17,10 @@
 
 // for(let link of links ){
 //     console.log(link.href)
-// 
-// const allLinks = document.innerText.js('a')
-// for(let link of allLinks){
-//     link.innerText = "hi"
-//
+// }
 
 
-const allLinks = document.querySelectorAll('a')
-
+const allLinks = document.innerText.js('a')
 for(let link of allLinks){
-    link.style.color = 'red'
-    link.style.textDecorationColor = "magenta"
-    link.style.textDecorationStyle = "wavy"
+    link.innerText = "hi"
 }
