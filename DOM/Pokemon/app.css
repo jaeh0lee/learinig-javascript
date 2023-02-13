@@ -1,0 +1,7 @@
+.wrap {
+    display: inline-block;
+    text-align: center;
+}
+.wrap img {
+    display: block;
+}
