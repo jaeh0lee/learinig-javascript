@@ -1,25 +1,22 @@
-const form = document.querySelector('#letter')
-const ul = document.querySelector('#talklist')
-
+const form = document.querySelector('#todo')
+const ul = document.querySelector('#list')
 
 form.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    const fistNameInput = form.elements.fisrtName;
-    const lastNameInput = form.elements.lastName;
-    listAdd(fistNameInput.value,lastNameInput.value);
-    fistNameInput.value = '';
-    lastNameInput.value = '';
+e.preventDefault()
+const firstTodoInput = form.elements.first
+const lastTodoInput = form.elements.last
+addList(firstTodoInput.value,lastTodoInput.value )
+// firstTodoInput.value = "";
+// lastTodoInput.value = "";
 })
 
 
 
 // 리스트 추가 함수 
 
-const listAdd = (userName, lastName) => {
-  const newList = document.createElement('li')
-  const bold = document.createElement('b')
-  bold.append(userName)
-  bold.append(lastName)
-  newList.append(bold) 
-  ul.append(newList)
+const addList = (first, last) => {
+ const newList = document.createElement('li')
+ newList.append(first)
+ newList.append(last)
+ ul.append(newList)
 }
