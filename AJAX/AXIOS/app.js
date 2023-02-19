@@ -1,5 +1,5 @@
 // Axios는 타사 라이브러리로 자바스크립트의 네이티브 함수가 아닙니다.
-// Axious는 HTTP 요청의 생성과 처리를 최대한 간소화할 목적으로 만들어졌습니다.
+// Axios는 HTTP 요청의 생성과 처리를 최대한 간소화할 목적으로 만들어졌습니다.
 
 // 이렇게 실행하면 프로미스가 반환됩니다.
 // axios.get("https://swapi.dev/api/people/1/")
@@ -60,23 +60,49 @@
 // btn.addEventListener('click', addNewJoke)
 
 
-const ul = document.querySelector('#jokes')
-const btn = document.querySelector('button')
+// const ul = document.querySelector('#jokes')
+// const btn = document.querySelector('button')
 
 
-const addNewjoke = async() =>{
-    const TextJoke =  await newList()
-    const NewLI = document.createElement('li')
-    NewLI.append(TextJoke)
-    ul.append(NewLI)
-}
+// const addNewjoke = async() =>{
+//     const TextJoke =  await newList()
+//     const NewLI = document.createElement('li')
+//     NewLI.append(TextJoke)
+//     ul.append(NewLI)
+// }
 
 
-const newList = async() =>{
-    const config = { headers : {Accept : 'application/json'}}
-    const res = await axios.get("https://icanhazdadjoke.com/", config)
-    return res.data.joke
-}
+// const newList = async() =>{
+//     const config = { headers : {Accept : 'application/json'}}
+//     const res = await axios.get("https://icanhazdadjoke.com/", config)
+//     return res.data.joke
+// }
 
-btn.addEventListener('click', addNewjoke)
+// btn.addEventListener('click', addNewjoke)
 // Axios는 정보를 파싱하고 작동할수 있는 객체로 변환합니다.
+
+
+
+const Ul = document.querySelector('#starwarz')
+const btn = document.querySelector('button')
+// 리스트 생성 
+const listUp = async() => {
+ const nameText = await starwazApi()
+ const newLI = document.createElement('li')
+ newLI.append(nameText)
+ Ul.append(newLI)
+ 
+}
+
+// web api 가져오기 
+const starwazApi = async() =>{
+    try{
+    const res = await axios.get(`https://swapi.dev/api/people/3`)
+    return res.data.name
+    }catch{
+    return "ERROR"
+    }   
+
+}
+btn.addEventListener('click', listUp)
+
