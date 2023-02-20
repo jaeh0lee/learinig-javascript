@@ -1,6 +1,5 @@
 # learinig-javascript
 
----
 
 ## 목차 
 
